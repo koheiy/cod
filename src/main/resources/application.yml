@@ -1,0 +1,3 @@
+target:
+  url: "https://www.mizuhobank.co.jp/rate_fee/market/quote/data/quote_yyyyMMdd.txt"
+  savedirectory: '/opt/tools/cod/json/'
