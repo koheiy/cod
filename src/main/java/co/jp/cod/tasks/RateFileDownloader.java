@@ -31,10 +31,10 @@ public class RateFileDownloader {
     @Value("${target.savedirectory}")
     private String saveDirectory;
 
-    @Scheduled(cron = "0 0 0 * * *", zone = "Asia/Tokyo")
+    @Scheduled(cron = "0 0 13 * * 1-5", zone = "Asia/Tokyo")
     public void download() throws JsonProcessingException {
 
-        String targetDate = LocalDateTime.now().minusDays(2).format(DateTimeFormatter.ofPattern("yyyyMMdd"));
+        String targetDate = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
         String accessTargetUrl = targetUrl.replace("yyyyMMdd", targetDate);
 
         RestTemplate template = new RestTemplateBuilder().build();
